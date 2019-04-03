@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'Brando Sans Text';
+  src: url("/font/BrandoSans-Text.woff2") format("woff2"), url("/font/BrandoSans-Text.woff") format("woff"), url("/font/BrandoSans-Text.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brando Sans';
+  src: url("/font/BrandoSans-Light.woff2") format("woff2"), url("/font/BrandoSans-Light.woff") format("woff"), url("/font/BrandoSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brando Sans';
+  src: url("/font/BrandoSans-SemiBold.woff2") format("woff2"), url("/font/BrandoSans-SemiBold.woff") format("woff"), url("/font/BrandoSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  background: #555970;
+  background: -moz-linear-gradient(top, #555970 0%, #323449 100%);
+  background: -webkit-linear-gradient(top, #555970 0%, #323449 100%);
+  background: linear-gradient(to bottom, #555970 0%, #323449 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555970', endColorstr='#323449',GradientType=0 );
+  text-align: center;
+  padding-bottom: 2rem;
+  font-family: 'Brando Sans Text';
+  font-weight: 300; }
+
+h1 {
+  font-family: 'Brando Sans';
+  font-weight: 600;
+  color: #222; }
+
+a {
+  text-decoration: none; }
+
+.desk {
+  width: 200px;
+  height: 60px;
+  background-color: green;
+  display: block; }
+
+.person {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  display: block; }
+
+.sun {
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  display: block; }
+
+.light {
+  opacity: 0.8; }
+
+.stronger {
+  opacity: 0.3; }
+
+.main-logo {
+  margin: 1.6rem 0rem 1.3rem;
+  width: 300px; }
+
+.room-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+  margin-top: -1rem; }
+  .room-list__button {
+    display: inline-block;
+    border: none;
+    padding: 0.9rem;
+    width: 100%;
+    background-color: #857fc2;
+    margin-top: -4px;
+    color: #fff; }
+  .room-list__card {
+    margin: 0 1.5rem;
+    -webkit-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36); }
+
+.timer-block {
+  position: relative;
+  margin: 1rem;
+  padding: 0.1rem;
+  background: #031758;
+  background: -webkit-linear-gradient(left, #031758 0%, #b277cf 100%);
+  background: -o-linear-gradient(left, #031758 0%, #b277cf 100%);
+  background: linear-gradient(to right, #031758 0%, #b277cf 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031758', endColorstr='#b277cf',GradientType=1 );
+  -webkit-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
+  z-index: 100; }
+  .timer-block h1 {
+    color: #fff;
+    font-weight: 300; }
+
+@media screen and (min-device-width: 500px) and (max-device-width: 1600px) {
+  .room-list {
+    grid-template-columns: 1fr 1fr; } }

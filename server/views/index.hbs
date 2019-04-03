@@ -1,0 +1,21 @@
+<nav>
+  {{> main-logo }}
+  {{> current-time }}
+</nav>
+<section class="room-list">
+  {{#each filteredData}}
+    <a href="room/{{ this.roomName }}">
+      <article class="room-list__card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.47 293.19">
+            {{> svgStyle }}
+            {{> background }}
+            {{> chairs}}
+            {{> occupation }}
+            {{> desk }}
+            {{> lighting}}
+          </svg>
+          <button class="room-list__button" type="button" name="button">{{ this.roomName }}</button>
+      </article>
+    </a>
+  {{/each}}
+</section>
