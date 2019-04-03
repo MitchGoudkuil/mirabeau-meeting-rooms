@@ -29,6 +29,11 @@
   font-style: normal;
 }
 
+a {
+  font-family: 'Brando Sans';
+  font-weight: 500;
+}
+
 body {
   margin: 0;
   background: #555970;
@@ -46,6 +51,11 @@ h1 {
   font-family: 'Brando Sans';
   font-weight: 600;
   color: #222;
+}
+
+p {
+  font-family: 'Brando Sans';
+  font-weight: 500;
 }
 
 a {
@@ -109,14 +119,17 @@ a {
     box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
   }
 
+  &__two-collumn {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+
   &__visual-data {
     background-color: #fff;
-    display: flex;
-    margin-top: -4px;
     border-top: 1px solid #dbdbdb;
 
     p {
-      width: 50%;
+      display: inline-block;
     }
   }
 }
