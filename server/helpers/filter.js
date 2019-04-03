@@ -21,6 +21,7 @@ function filterData(data) {
         Math.floor(item.measurements.mic_level / 100) === tempConfig.minMicLevel
           ? true
           : false,
+      decibels: Math.floor(item.measurements.mic_level / 100),
       roomTemp: checkTemperature(item.measurements.temperature),
       uvLight:
         item.measurements.ambient_light > tempConfig.minLighting ? true : false

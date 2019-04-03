@@ -4,7 +4,6 @@
 </nav>
 <section class="room-list">
   {{#each filteredData}}
-    <a href="room/{{ this.roomName }}">
       <article class="room-list__card">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.47 293.19">
             {{> svgStyle }}
@@ -14,8 +13,11 @@
             {{> desk }}
             {{> lighting}}
           </svg>
-          <button class="room-list__button" type="button" name="button">{{ this.roomName }}</button>
+          <section class="room-list__visual-data">
+              <p>{{ this.roomTemp.celcius }} &#8451;</p>
+              <p> {{ this.decibels }}</p>
+          </section>
+          <a href="room/{{ this.roomName }}" class="room-list__button" type="button" name="button">{{ this.roomName }}</a>
       </article>
-    </a>
   {{/each}}
 </section>

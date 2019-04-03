@@ -25,7 +25,7 @@ app.set('views', __dirname + '/views')
 app.get('/', async (req, res) => {
   let data = await api.get('/api/v1/rooms')
   let filteredData = filter.filterData(data)
-  console.log(data)
+  console.log(filteredData)
 
   res.render('index', {
     data,
