@@ -4,10 +4,10 @@
   {{> filter}}
 </nav>
   {{> current-time }}
-<section class="room-list">
+<div class="room-list">
   {{#each filteredData}}
-      <article aria-label="card of meetingroom named,  {{this.roomName}}" class="room-list__card">
-        <section class="room-list__two-collumn">
+      <div aria-label="card of meetingroom named,  {{this.roomName}}" class="room-list__card">
+        <div class="room-list__two-collumn">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.47 293.19">
             {{> svgStyle }}
             {{> background }}
@@ -16,11 +16,11 @@
             {{> desk }}
             {{> lighting}}
           </svg>
-          <section class="room-list__visual-data">
+          <div class="room-list__visual-data">
             {{> card-info }}
-          </section>
-        </section>
+          </div>
+        </div>
           <!-- <a href="room/{{ this.roomName }}" class="room-list__button" type="button" name="button">{{ this.roomName }}</a> -->
-      </article>
+      </div>
   {{/each}}
-</section>
+</div>
