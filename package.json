@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Denniswegereef/mirabeau-meeting-rooms.git"
+    "url": "git+https://github.com/MitchGoudkuil/mirabeau-meeting-rooms.git"
   },
   "prettier": {
     "semi": false,
@@ -33,9 +33,9 @@
   "author": "Dennis Wegereef, Mitch Goudkuil",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Denniswegereef/mirabeau-meeting-rooms/issues"
+    "url": "https://github.com/MitchGoudkuil/mirabeau-meeting-rooms/issues"
   },
-  "homepage": "https://github.com/Denniswegereef/mirabeau-meeting-rooms#readme",
+  "homepage": "https://github.com/MitchGoudkuil/mirabeau-meeting-rooms#readme",
   "devDependencies": {
     "chalk": "^2.4.2",
     "dotenv": "^7.0.0",
@@ -47,7 +47,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.2"
+    "express-handlebars": "^3.0.2",
+    "laggard": "^2.0.1"
   }
 }

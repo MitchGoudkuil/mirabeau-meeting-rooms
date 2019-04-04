@@ -1,3 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -47,10 +177,71 @@ body {
   font-weight: 300;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Brando Sans';
   font-weight: 600;
-  color: #222;
+}
+
+h1 {
+  display: block;
+  font-size: 2rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h4 {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1.33rem;
+  margin-bottom: 1.33rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h5 {
+  display: block;
+  font-size: 0.83rem;
+  margin-top: 1.67rem;
+  margin-bottom: 1.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h6 {
+  display: block;
+  font-size: 0.67rem;
+  margin-top: 2.33rem;
+  margin-bottom: 2.33rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 p {
@@ -62,25 +253,78 @@ a {
   text-decoration: none;
 }
 
-.desk {
-  width: 200px;
-  height: 60px;
-  background-color: green;
+button {
+  font-family: 'Brando Sans';
+}
+
+nav {
+  padding: 1rem 1rem;
   display: block;
 }
 
-.person {
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  display: block;
+@supports (display: grid) {
+  .room-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+  }
 }
 
-.sun {
-  width: 30px;
-  height: 30px;
-  background-color: yellow;
-  display: block;
+@supports not (display: grid) {
+  .room-list {
+    display: inline-block;
+  }
+}
+
+@supports (display: flex) {
+  .room-list {
+    &__info {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__icon-free {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__icon-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@supports not (display: flex) {
+  .room-list {
+    &__info {
+      display: inline-block;
+    }
+
+    &__icon-free {
+      display: inline-block;
+    }
+
+    &__icon-next {
+      display: block;
+    }
+  }
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  background-color: #352168;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+}
+
+.room-filter {
+  margin-top: 1rem;
 }
 
 .light {
@@ -91,18 +335,7 @@ a {
   opacity: 0.3;
 }
 
-.main-logo {
-  margin: 1.6rem 0rem 1.3rem;
-  width: 300px;
-}
-
 .room-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 1rem;
-  grid-column-gap: 1rem;
-  margin-top: -1rem;
-
   &__button {
     display: inline-block;
     border: none;
@@ -113,36 +346,59 @@ a {
   }
 
   &__card {
-    margin: 0 1.5rem;
+    display: inline-block;
+    margin: 0 1.5rem 1rem;
     -webkit-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
     -moz-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
     box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
   }
 
-  &__two-collumn {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-  }
-
   &__visual-data {
-    background-color: #fff;
-    border-top: 1px solid #dbdbdb;
+    background-color: #130923;
+    margin-top: -4px;
+    color: #fff;
+    padding: 0.4rem 0rem;
 
     p {
       display: inline-block;
+    }
+  }
+
+  &__info {
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.1rem;
+    }
+  }
+
+  &__icon-next {
+    margin-right: 0.6rem;
+    background-color: #352168;
+    padding: 0.3rem 0.4rem;
+  }
+
+  &__icon-free {
+    background-color: #352168;
+    padding: 0.3rem 0.4rem;
+    margin-bottom: 0.4rem;
+
+    svg {
+      width: 20px;
+      margin-right: 0.3rem;
     }
   }
 }
 
 .timer-block {
   position: relative;
-  margin: 1rem;
+  margin: 2rem 1rem 1rem;
   padding: 0.1rem;
-  background: #031758;
-  background: -webkit-linear-gradient(left, #031758 0%, #b277cf 100%);
-  background: -o-linear-gradient(left, #031758 0%, #b277cf 100%);
-  background: linear-gradient(to right, #031758 0%, #b277cf 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031758', endColorstr='#b277cf',GradientType=1 );
+  background: #352168;
+  background: -webkit-linear-gradient(left, #352168 0%, #b277cf 100%);
+  background: -o-linear-gradient(left, #352168 0%, #b277cf 100%);
+  background: linear-gradient(to right, #352168 0%, #b277cf 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#352168', endColorstr='#b277cf',GradientType=1 );
   -webkit-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
   -moz-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
   box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.36);
@@ -154,7 +410,16 @@ a {
   }
 }
 
-@media screen and (min-device-width: 500px) and (max-device-width: 1600px) {
+@media only screen and (min-width: 900px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .room-filter {
+    margin-top: 0;
+  }
   .room-list {
     grid-template-columns: 1fr 1fr;
   }
